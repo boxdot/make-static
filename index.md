@@ -1,2 +1,2 @@
 
-Tue May 12 08:02:02 2015 -- (make static blog)[design]
+Tue May 12 08:02:02 2015 -- (make static blog)[make-static/]
