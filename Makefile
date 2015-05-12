@@ -25,7 +25,6 @@ endif
 
 
 all: \
-	info \
 	$(TARGET) \
 	$(INDEX_HTML) \
 	$(HTML_FILES) \
@@ -57,7 +56,8 @@ endif
 
 $(TARGET_DIRS): $(TARGET)/%: %
 	@echo "# Building recursively $<..."
-	@make -s all -C $< -f ../$(MAKEFILE) TARGET=../$@ MAKEFILE=../$(MAKEFILE)
+	touch $<
+	make -s all -C $< -f ../$(MAKEFILE) TARGET=../$@ MAKEFILE=../$(MAKEFILE)
 
 
 .PHONY: clean info
