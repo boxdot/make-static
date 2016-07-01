@@ -1,6 +1,6 @@
 # redefined in the recursive call
 MAKEFILE := Makefile
-TARGET := output
+TARGET := _output
 
 MD_FILES=$(shell find *.md -maxdepth 0 -type f 2>/dev/null | grep -v index | tr '\n' ' ')
 DIRS=$(shell find * -maxdepth 0 -type d 2>/dev/null | grep -v $(TARGET) | grep -v assets | tr '\n' ' ')
